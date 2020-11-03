@@ -24,18 +24,18 @@ class App extends Component {
   }
  
   handleKeyPress = (e) => {    
-    if(e.keyCode == 49){
+    if(e.keyCode === 49){
       this.setState({ selectedCard: 'Sol' })
       this.getUser();
     }
     
-    if(e.which == 50){
+    if(e.which === 50){
       this.setState({ selectedCard: 'Sag' })
       this.getUser();
     }
   }
 
-  componentWillMount(){
+  componentDidMount(){
     this.getUser()
     document.addEventListener('keypress', this.handleKeyPress)
   }
